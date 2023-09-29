@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Data</title>
+</head>
+<body>
+    <h1>Display Data</h1>
+    
+    <!-- Search Form -->
+    <form method="POST" action="/search">
+        <label for="contact_to_find">Search by Contact Number:</label>
+        <input type="text" name="contact_to_find" id="contact_to_find" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display Data -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Nationality</th>
+                <th>Contact</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+                <tr>
+                    <td>{{ entry['Name'] }}</td>
+                    <td>{{ entry['Nationality'] }}</td>
+                    <td>{{ entry['Contact'] }}</td>
+                    <td><img src="{{ entry['Image_Path'] }}" width="100"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
