@@ -1,6 +1,6 @@
-# Refugee_Secure_Data_Blockchain
+# Refugee Secure Data using Blockchain
 A refugee data storage project using blockchain
-Project Report: Refugee Camp
+Refugee Camp
 
 
 Introduction
